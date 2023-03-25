@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/onboarding/onboarding.dart';
 
+
 class Home_screen extends StatefulWidget {
   const Home_screen({super.key});
 
@@ -95,10 +96,8 @@ class _Home_screenState extends State<Home_screen> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Onboarding()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Onboarding()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(top: 620),

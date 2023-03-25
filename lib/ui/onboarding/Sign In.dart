@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:xyz/ui/onboarding/Sign%20In.dart';
-import 'package:xyz/ui/onboarding/varify.dart';
+import 'package:xyz/ui/loginscreen.dart';
+import 'package:xyz/ui/onboarding/psswordR.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignIn extends StatefulWidget {
+  const SignIn({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignIn> createState() => _SignInState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,10 +24,17 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(left: 12),
             child: Text(
-              "Create a Smartplay account",
-              style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700),
+              "Hello There!",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 12),
+            child: Text(
+              "welcome back, Sign in to your account",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
             ),
           ),
           const SizedBox(
@@ -47,7 +54,44 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, left: 20),
+            child: TextField(
+              decoration: InputDecoration(
+                  hintText: "password",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(
+                        style: BorderStyle.solid,
+                        width: 4,
+                      ))),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PasswordRecovery()));
+              },
+              child: const Text(
+                "Forget password ?",
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
@@ -64,10 +108,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Verify()));
+                              builder: (context) => const LoginScreen()));
                     },
                     child: const Text(
-                      "Sign Up",
+                      "sign in",
                       style:
                           TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
                     ),
@@ -124,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Row(
               children: [
                 const Text(
-                  "Already have an account ? ",
+                  "Don't have an account? ",
                   style: TextStyle(fontSize: 20),
                 ),
                 GestureDetector(
@@ -132,10 +176,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignIn()));
+                            builder: (context) => const LoginScreen()));
                   },
                   child: const Text(
-                    "Sign in ",
+                    "Sign up ",
                     style: TextStyle(fontSize: 20),
                   ),
                 )
