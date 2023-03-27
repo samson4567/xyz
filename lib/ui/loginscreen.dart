@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/onboarding/Sign%20In.dart';
-import 'package:xyz/ui/onboarding/varify.dart';
+import 'package:xyz/ui/onboarding/otp-auth.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -50,28 +50,23 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 40,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(
+              left: 40,
+            ),
             child: Container(
-              height: 60,
-              width: 370,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.grey),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Verify()));
-                    },
-                    child: const Text(
-                      "Sign Up",
-                      style:
-                          TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
-                    ),
-                  ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Verify()));
+                      },
+                      child: Image.asset("assets/images/signup.png")),
                 ],
               ),
             ),

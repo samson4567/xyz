@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xyz/ui/onboarding/create%20pin.dart';
 
 class ID extends StatefulWidget {
   const ID({super.key});
@@ -86,7 +87,7 @@ class _IDState extends State<ID> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const ID()));
+                          MaterialPageRoute(builder: (context) => const CreatePin()));
                     },
                     child: const Text(
                       "Continue",

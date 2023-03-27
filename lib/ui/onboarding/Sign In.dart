@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/loginscreen.dart';
 import 'package:xyz/ui/onboarding/psswordR.dart';
+import 'package:xyz/ui/onboarding/signfilled.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -30,6 +31,7 @@ class _SignInState extends State<SignIn> {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
             ),
           ),
+          const SizedBox(height: 20,),
           const Padding(
             padding: EdgeInsets.only(left: 12),
             child: Text(
@@ -73,7 +75,7 @@ class _SignInState extends State<SignIn> {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: 25),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -94,10 +96,8 @@ class _SignInState extends State<SignIn> {
             height: 15,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 40),
             child: Container(
-              height: 60,
-              width: 370,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.grey),
               child: Column(
@@ -108,13 +108,9 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
+                              builder: (context) => const SignFilled()));
                     },
-                    child: const Text(
-                      "sign in",
-                      style:
-                          TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
-                    ),
+                     child: Image.asset("assets/images/sign in.png")
                   ),
                 ],
               ),
