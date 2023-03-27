@@ -16,24 +16,24 @@ class _ResetState extends State<Reset> {
       body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(right: 300, top: 50),
+            padding: EdgeInsets.only(right: 350, top: 50),
             child: Icon(Icons.arrow_back_ios_rounded),
           ),
           const SizedBox(
             height: 40,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: EdgeInsets.only(right: 100),
             child: Text(
               "Create a New Password",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 30, right: 20),
+            padding: EdgeInsets.only(left: 25, right: 25),
             child: Text(
               "Please, Enter  a new password below different from previous password ",
               style: TextStyle(
@@ -73,36 +73,23 @@ class _ResetState extends State<Reset> {
                       ))),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
-            child: Container(
-              height: 60,
-              width: 370,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.black),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen()));
                     },
-                    child: const Text(
-                      "Create Password",
-                      style:
-                          TextStyle(
-                            color: Colors.white,
-                            fontSize: 19, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ],
-              ),
+                    child: Image.asset("assets/images/cre.png")),
+              ],
             ),
           ),
         ],

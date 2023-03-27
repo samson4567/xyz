@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             MaterialPageRoute(
                                 builder: (context) => const Verify()));
                       },
-                      child: Image.asset("assets/images/signup.png")),
+                      child: Image.asset("assets/images/cre2.png")),
                 ],
               ),
             ),

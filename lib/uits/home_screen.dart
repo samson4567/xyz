@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/onboarding/onboarding.dart';
 
-
 class Home_screen extends StatefulWidget {
   const Home_screen({super.key});
 
@@ -54,6 +53,25 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/rec1.png'))),
               ),
             ),
+               Padding(
+              padding: const EdgeInsets.only(left: 150, top: 45),
+              child: Container(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/vic.png'))),
+              ),
+            ),
+               
+               Padding(
+              padding: const EdgeInsets.only(left: 80, top: 10),
+              child: Container(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/frame.png'))),
+              ),
+            ),
+           
+           
             Padding(
               padding: const EdgeInsets.only(top: 180, right: 120),
               child: Container(
@@ -62,12 +80,28 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/rec2.png'))),
               ),
             ),
+          
             Padding(
               padding: const EdgeInsets.only(top: 400),
               child: Container(
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/Rectangle 4220.png"))),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.only( top: 150, right: 120),
+              child: Container(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/direct.png'))),
+              ),
+            ),  Padding(
+              padding: const EdgeInsets.only(  right: 120, top: 180),
+              child: Container(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/split.png'))),
               ),
             ),
             Padding(
@@ -96,8 +130,10 @@ class _Home_screenState extends State<Home_screen> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Onboarding()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Onboarding()));
               },
               child: Padding(
                 padding: const EdgeInsets.only(top: 620),

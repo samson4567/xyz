@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/loginscreen.dart';
 import 'package:xyz/ui/onboarding/confirmation.dart';
+import 'package:xyz/ui/onboarding/createpin2.dart';
 
 class CreatePin extends StatefulWidget {
   const CreatePin({super.key});
@@ -16,16 +17,16 @@ class _CreatePinState extends State<CreatePin> {
       body: ListView(
         children: [
           const Padding(
-            padding: EdgeInsets.only(right: 350, top: 40),
+            padding: EdgeInsets.only(right: 350, top: 20),
             child: Icon(Icons.arrow_back_ios_rounded),
           ),
           const SizedBox(
-            height: 40,
+            height: 10,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 40),
+            padding: EdgeInsets.only(left: 15, top: 20),
             child: Text(
-              "Set up a pin Code ",
+              "Set up a Pin Code ",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
             ),
           ),
@@ -150,10 +151,8 @@ class _CreatePinState extends State<CreatePin> {
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Container(
-              height: 60,
-              width: 370,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.grey),
+           
+             
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -162,13 +161,9 @@ class _CreatePinState extends State<CreatePin> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Confirmation()));
+                              builder: (context) => const Create2()));
                     },
-                    child: const Text(
-                      "Create Pin",
-                      style:
-                          TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
-                    ),
+                    child: Image.asset("assets/images/creat u.png")
                   ),
                 ],
               ),

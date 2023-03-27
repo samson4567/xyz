@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// ignore: unused_import
 import 'package:xyz/ui/onboarding/id-empty.dart';
 import 'package:xyz/ui/onboarding/otp2-auth.dart';
 
@@ -169,7 +170,7 @@ class _VerifyState extends State<Verify> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const otp2()));
               },
-              child: Image.asset("assets/images/confirm.png")),
+              child: Image.asset("assets/images/confirm2.png")),
         ],
       ),
     ]));
