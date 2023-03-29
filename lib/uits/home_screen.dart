@@ -53,7 +53,7 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/rec1.png'))),
               ),
             ),
-               Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 150, top: 45),
               child: Container(
                 decoration: const BoxDecoration(
@@ -61,8 +61,7 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/vic.png'))),
               ),
             ),
-               
-               Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 80, top: 10),
               child: Container(
                 decoration: const BoxDecoration(
@@ -70,8 +69,6 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/frame.png'))),
               ),
             ),
-           
-           
             Padding(
               padding: const EdgeInsets.only(top: 180, right: 120),
               child: Container(
@@ -80,7 +77,6 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage('assets/images/rec2.png'))),
               ),
             ),
-          
             Padding(
               padding: const EdgeInsets.only(top: 400),
               child: Container(
@@ -89,15 +85,16 @@ class _Home_screenState extends State<Home_screen> {
                         image: AssetImage("assets/images/Rectangle 4220.png"))),
               ),
             ),
-             Padding(
-              padding: const EdgeInsets.only( top: 150, right: 120),
+            Padding(
+              padding: const EdgeInsets.only(top: 150, right: 120),
               child: Container(
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/direct.png'))),
               ),
-            ),  Padding(
-              padding: const EdgeInsets.only(  right: 120, top: 180),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 120, top: 180),
               child: Container(
                 decoration: const BoxDecoration(
                     image: DecorationImage(

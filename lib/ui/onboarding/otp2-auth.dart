@@ -8,14 +8,17 @@ class otp2 extends StatefulWidget {
   State<otp2> createState() => _otp2State();
 }
 
-class _otp2State extends State<otp2> {
+class _Otp2State extends State<otp2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: [
-      const Padding(
-        padding: EdgeInsets.only(right: 350, top: 40),
-        child: Icon(Icons.arrow_back_ios_rounded),
+      InkWell(
+        onTap: () => Navigator.pop(context),
+        child: const Padding(
+          padding: EdgeInsets.only(right: 350, top: 40),
+          child: Icon(Icons.arrow_back_ios_rounded),
+        ),
       ),
       const SizedBox(
         height: 30,

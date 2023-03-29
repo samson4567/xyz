@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:xyz/ui/loginscreen.dart';
-import 'package:xyz/ui/onboarding/psswordR.dart';
-import 'package:xyz/ui/onboarding/signfilled.dart';
+import 'package:xyz/ui/onboarding/Sign%20In.dart';
+import 'package:xyz/ui/onboarding/otp-auth.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class LoginScreen2 extends StatefulWidget {
+  const LoginScreen2({super.key});
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<LoginScreen2> createState() => _LoginScreen2State();
 }
 
-class _SignInState extends State<SignIn> {
+class _LoginScreen2State extends State<LoginScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +17,9 @@ class _SignInState extends State<SignIn> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Padding(
-              padding: EdgeInsets.only(right: 200, top: 50),
+            onTap: () => Navigator.pop(context),
+            child: const Padding(
+              padding: EdgeInsets.only(left: 10, right: 100, top: 50),
               child: Icon(Icons.arrow_back_ios_rounded),
             ),
           ),
@@ -30,20 +27,10 @@ class _SignInState extends State<SignIn> {
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 12),
+            padding: EdgeInsets.all(20.0),
             child: Text(
-              "Hello There!",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 12),
-            child: Text(
-              "welcome back, Sign in to your account",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+              "Create a Smartplay account",
+              style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700),
             ),
           ),
           const SizedBox(
@@ -52,6 +39,7 @@ class _SignInState extends State<SignIn> {
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: TextField(
+              
               decoration: InputDecoration(
                   hintText: "email",
                   border: OutlineInputBorder(
@@ -63,47 +51,12 @@ class _SignInState extends State<SignIn> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                  hintText: "password",
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        style: BorderStyle.solid,
-                        width: 4,
-                      ))),
+            padding: const EdgeInsets.only(
+              left: 40,
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 25),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const PasswordRecovery()));
-              },
-              child: const Text(
-                "Forget password ?",
-                style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 40),
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.grey),
@@ -115,9 +68,9 @@ class _SignInState extends State<SignIn> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SignFilled()));
+                                builder: (context) => const Verify()));
                       },
-                      child: Image.asset("assets/images/sign in.png")),
+                      child: Image.asset("assets/images/cre2.png")),
                 ],
               ),
             ),
@@ -126,7 +79,7 @@ class _SignInState extends State<SignIn> {
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 180),
+            padding: EdgeInsets.only(left: 190),
             child: Text(
               "OR",
               style: TextStyle(fontSize: 15),
@@ -170,7 +123,7 @@ class _SignInState extends State<SignIn> {
             child: Row(
               children: [
                 const Text(
-                  "Don't have an account? ",
+                  "Already have an account ? ",
                   style: TextStyle(fontSize: 20),
                 ),
                 GestureDetector(
@@ -178,11 +131,11 @@ class _SignInState extends State<SignIn> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                            builder: (context) => const SignIn()));
                   },
                   child: const Text(
-                    "Sign up ",
-                    style: TextStyle(fontSize: 20),
+                    "Sign in ",
+                    style: TextStyle(fontSize: 20, color: Colors.blueGrey),
                   ),
                 )
               ],

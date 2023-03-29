@@ -17,9 +17,11 @@ class _VerifyState extends State<Verify> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: [
-      const Padding(
-        padding: EdgeInsets.only(right: 350, top: 40),
-        child: Icon(Icons.arrow_back_ios_rounded),
+      InkWell(onTap: () => Navigator.pop(context),
+        child: const Padding(
+          padding: EdgeInsets.only(right: 350, top: 40),
+          child: Icon(Icons.arrow_back_ios_rounded),
+        ),
       ),
       const SizedBox(
         height: 30,
@@ -34,19 +36,15 @@ class _VerifyState extends State<Verify> {
       const SizedBox(
         height: 25,
       ),
-      Padding(
-        padding: const EdgeInsets.only(right: 25),
-        child: const Text(
-          " We Send a code to (****@gmail.com), Enter it ",
-          style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+      const Padding(
+        padding: EdgeInsets.only(right: 25, left: 20),
+        child: Text(
+          " We Send a code to (****@gmail.com), Enter it, here to verify your identity",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
         ),
       ),
       const SizedBox(
         height: 10,
-      ),
-      const Text(
-        " here to Verify your identity",
-        style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
       ),
       const SizedBox(
         height: 30,

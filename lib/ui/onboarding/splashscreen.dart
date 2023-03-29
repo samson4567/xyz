@@ -1,11 +1,14 @@
+
+
+
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:xyz/uits/home_screen.dart';
+import 'package:xyz/ui/onboarding/onboarding.dart';
 import 'package:xyz/widget/navigator.dart';
 
 import '../../widget/dimention.dart';
-import 'onboarding.dart';
 
 
 
@@ -48,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen>
     return Timer(
       const Duration(seconds: 3),
       () {
-        RouteNavigators.routeReplace(context, const Home_screen() );
+        RouteNavigators.routeReplace(context, const Onboarding());
       },
     );
   }
@@ -65,8 +68,8 @@ class _SplashScreenState extends State<SplashScreen>
           color: Colors.transparent,
           child: ScaleTransition(
             scale: _animation,
-            child: Image.asset("assets/images/splash.png"
-              ,
+            child: Image.asset(
+              'assets/images/logo.png',
               height: getScreenHeight(250),
                     width: getScreenWidth(250),
               fit: BoxFit.contain,

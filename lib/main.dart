@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/onboarding/onboarding.dart';
+import 'package:xyz/ui/onboarding/splashscreen.dart';
 import 'package:xyz/uits/home_screen.dart';
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-      home: const Home_screen(),
+      home: const SplashScreen(),
     );
   }
 }

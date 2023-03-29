@@ -15,9 +15,14 @@ class _ResetState extends State<Reset> {
     return Scaffold(
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 350, top: 50),
-            child: Icon(Icons.arrow_back_ios_rounded),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(right: 350, top: 50),
+              child: Icon(Icons.arrow_back_ios_rounded),
+            ),
           ),
           const SizedBox(
             height: 40,
@@ -77,7 +82,7 @@ class _ResetState extends State<Reset> {
             height: 100,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

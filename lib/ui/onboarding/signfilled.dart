@@ -17,9 +17,14 @@ class _SignFilledState extends State<SignFilled> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 200, top: 50),
-            child: Icon(Icons.arrow_back_ios_rounded),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(right: 200, top: 50),
+              child: Icon(Icons.arrow_back_ios_rounded),
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -30,7 +35,10 @@ class _SignFilledState extends State<SignFilled> {
               "Hello There!",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
             ),
-          ), const SizedBox(height: 20,),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
           const Padding(
             padding: EdgeInsets.only(left: 12),
             child: Text(
@@ -107,7 +115,8 @@ class _SignFilledState extends State<SignFilled> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const PasswordRecovery()));
+                                builder: (context) =>
+                                    const PasswordRecovery()));
                       },
                       child: Image.asset("assets/images/sign in.png")),
                 ],

@@ -11,12 +11,15 @@ class Create2 extends StatefulWidget {
 class _CreateState extends State<Create2> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 350, top: 20),
-            child: Icon(Icons.arrow_back_ios_rounded),
+          InkWell(
+            onTap: () => Navigator.pop(context),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 350, top: 20),
+              child: Icon(Icons.arrow_back_ios_rounded),
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -149,20 +152,17 @@ class _CreateState extends State<Create2> {
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Container(
-           
-             
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Confirmation()));
-                    },
-                    child: Image.asset("assets/images/create s.png")
-                  ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Confirmation()));
+                      },
+                      child: Image.asset("assets/images/create s.png")),
                 ],
               ),
             ),
@@ -170,7 +170,5 @@ class _CreateState extends State<Create2> {
         ],
       ),
     );
-      
-    
   }
 }

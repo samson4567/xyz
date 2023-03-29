@@ -16,9 +16,12 @@ class _CreatePinState extends State<CreatePin> {
     return Scaffold(
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 350, top: 20),
-            child: Icon(Icons.arrow_back_ios_rounded),
+          InkWell(
+            onTap: () => Navigator.pop(context),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 350, top: 20),
+              child: Icon(Icons.arrow_back_ios_rounded),
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -151,20 +154,17 @@ class _CreatePinState extends State<CreatePin> {
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Container(
-           
-             
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Create2()));
-                    },
-                    child: Image.asset("assets/images/creat u.png")
-                  ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Create2()));
+                      },
+                      child: Image.asset("assets/images/creat u.png")),
                 ],
               ),
             ),

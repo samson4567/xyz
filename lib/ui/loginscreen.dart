@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xyz/ui/onboarding/Sign%20In.dart';
-import 'package:xyz/ui/onboarding/otp-auth.dart';
+import 'package:xyz/ui/onboarding/loginscreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,15 +16,20 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 200, top: 50),
-            child: Icon(Icons.arrow_back_ios_rounded),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(left: 10, right: 100, top: 50),
+              child: Icon(Icons.arrow_back_ios_rounded),
+            ),
           ),
           const SizedBox(
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(20.0),
             child: Text(
               "Create a Smartplay account",
               style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700),
@@ -37,13 +42,11 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: TextField(
               decoration: InputDecoration(
-                  hintText: "email",
+                  fillColor: const Color(0xFFF9FAFB),
+                  hintText: "Email",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        style: BorderStyle.solid,
-                        width: 4,
-                      ))),
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide.none)),
             ),
           ),
           const SizedBox(
@@ -64,9 +67,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Verify()));
+                                builder: (context) => const LoginScreen2()));
                       },
-                      child: Image.asset("assets/images/cre2.png")),
+                      child: Image.asset("assets/images/signup2.png")),
                 ],
               ),
             ),
@@ -75,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 20,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 180),
+            padding: EdgeInsets.only(left: 190),
             child: Text(
               "OR",
               style: TextStyle(fontSize: 15),
@@ -131,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: const Text(
                     "Sign in ",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 20, color: Colors.blueGrey),
                   ),
                 )
               ],

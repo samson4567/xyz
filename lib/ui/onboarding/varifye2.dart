@@ -14,12 +14,17 @@ class _Verify2State extends State<Verify2> {
     return Scaffold(
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 300),
-            child: Image.asset(
-              "assets/images/human.png",
-              height: 150,
-              width: 70,
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(right: 300),
+              child: Image.asset(
+                "assets/images/human.png",
+                height: 150,
+                width: 70,
+              ),
             ),
           ),
           const Padding(
